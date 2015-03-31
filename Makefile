@@ -78,7 +78,7 @@ sort: ssort.c
 	$(COMPILER) $(FLAGS) ssort.c -o sort
 
 run: sort
-	mpirun -np 10 -hosts box567,box571 ./sort
+	mpirun -np 10 -hosts box567,box571 ./sort 10000
 
 crunch: sort
 	mpirun -np 16 -hosts crunchy1,crunchy3 ./sort 1000
@@ -87,7 +87,6 @@ crunch: sort
 	mpirun -np 16 -hosts crunchy1,crunchy3 ./sort 1000000
 	mpirun -np 16 -hosts crunchy1,crunchy3 ./sort 10000000
 	mpirun -np 16 -hosts crunchy1,crunchy3 ./sort 100000000
-	mpirun -np 16 -hosts crunchy1,crunchy3 ./sort 1000000000
 
 
 # clean up

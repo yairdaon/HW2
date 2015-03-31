@@ -57,5 +57,6 @@ if (rank < 2) {
   }
 
 MPI_Finalize();
+return 0;
 }
 //The bug: Each task sends expects to receive a tag that equals its rank.

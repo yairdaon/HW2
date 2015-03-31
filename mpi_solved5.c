@@ -78,5 +78,6 @@ int main (int argc, char *argv[]) {
   }
   
   MPI_Finalize();
+  return 0;
 }
 // Made communication non blocking

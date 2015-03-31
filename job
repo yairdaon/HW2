@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -J YairHW2 # job name
+#SBATCH -o YairHW2.o%j # output and error file name (%j expands to jobID)
+#SBATCH -n 64 # total number of mpi tasks requested
+#SBATCH -p development # queue (partition) -- normal, development, etc.
+#SBATCH -t 00:10:00 # run time (hh:mm:ss) - ten minutes
+#SBATCH --mail-user=yd546@nyu.edu
+#SBATCH --mail-type=begin # email me when the job starts
+#SBATCH --mail-type=end # email me when the job finishes
+#SBATCH -A TG-ASC150003 # account number
+ibrun ./sort # run the MPI executable named sort

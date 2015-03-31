@@ -1,0 +1,19 @@
+Homework 2 solution - Yair Daon
+-------------------------------
+
+1. I found the bugs in 1,2,3,4 and 5. These are commented in the files.
+
+2. I have the code running but was not able to figure out how to log 
+into Stampede. Running on crunchy1 and crunchy3 using 16 processors
+I don't see any clear pattern but scaling seems linear in the size of
+the data. This is reasonable - I used a constant fraction of the data
+as splitters(one tenth) and so communication costs should dominate 
+the computaitional complexity inside each node.
+
+3. We did not discuss this thoroughly but I would like to try to parallelize
+some of the code I am using for my previous project. Mainly, I want to use 
+stationary sample algorithm for optimizing expectations and this opens up the
+door to at least two parallelizations. Firstly, we can do parallel MCMC (I saw
+someone did that with Prof. Goodman's code a few years ago). Second, I can 
+parallelize the optimization step by taking different starting points. I will
+probably work alone.  
